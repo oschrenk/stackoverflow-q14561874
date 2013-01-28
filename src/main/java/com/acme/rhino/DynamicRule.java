@@ -2,7 +2,6 @@ package com.acme.rhino;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Function;
@@ -39,7 +38,7 @@ public class DynamicRule {
 		this.scope = scope;
 	}
 
-	public Target evaluate(final Map<String, String> values) {
+	public Target evaluate() {
 		final Function evaluate = (Function) scope.get("evaluate", scope);
 		return (Target) Context.jsToJava(evaluate.call(context, scope, scope,
 				new Object[] {}), Target.class);

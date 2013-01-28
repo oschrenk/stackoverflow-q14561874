@@ -23,21 +23,11 @@ public class Target extends ScriptableObject {
 		modifiers.add(new Modifier(message, value));
 	}
 
-	@JSFunction
-	public void printSomething() {
-		System.out.println("woot");
-	}
-
-	public List<Modifier> getModifiers() {
-		return modifiers;
-	}
-
 	public int getValue() {
 		int sum = 0;
 		for (final Modifier modifier : modifiers) {
 			sum += modifier.getValue();
 		}
-
 		return sum;
 	}
 
