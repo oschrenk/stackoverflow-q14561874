@@ -8,10 +8,6 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<version.junit>4.10</version.junit>
-		<version.guava>14.0-rc1</version.guava>
-		<version.rhino>1.7R4</version.rhino>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -50,29 +46,22 @@
 
 	<dependencies>
 
-		<!-- EXTERNAL -->
-
 		<dependency>
 			<groupId>org.mozilla</groupId>
 			<artifactId>rhino</artifactId>
-			<version>${version.rhino}</version>
+			<version>1.7R4</version>
 		</dependency>
-
-		<!-- COMMON -->
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>${version.guava}</version>
-			<scope>test</scope>
+			<version>14.0-rc1</version>
 		</dependency>
-
-		<!-- TEST -->
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${version.junit}</version>
+			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
 
