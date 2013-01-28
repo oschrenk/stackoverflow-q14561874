@@ -39,16 +39,6 @@ public class DynamicRule {
 		this.scope = scope;
 	}
 
-	public String[] getRequiredValues() {
-		final Function getRequiredValues = (Function) scope.get(
-				"getRequiredValues", scope);
-
-		return (String[]) Context.jsToJava(
-				getRequiredValues.call(context, scope, scope, new Object[] {}),
-				String[].class);
-
-	}
-
 	public Target evaluate(final Map<String, String> values) {
 		final Function evaluate = (Function) scope.get("evaluate", scope);
 		return (Target) Context.jsToJava(evaluate.call(context, scope, scope,
