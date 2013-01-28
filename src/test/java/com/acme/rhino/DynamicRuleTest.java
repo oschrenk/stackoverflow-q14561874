@@ -9,16 +9,13 @@ import org.junit.Test;
 
 public class DynamicRuleTest {
 
-	private static final String TARGET = "/rule.evaluate.target.js";
-
-	protected File getFile(final String s) {
-		return new File(this.getClass().getResource(s).getFile());
-	}
-
 	@Test
 	public void evaluate() throws IOException {
-		final DynamicRule rule = DynamicRule.build(getFile(TARGET));
-		assertEquals(3, rule.evaluate().getValue());
+		final File file = new File(this.getClass()
+				.getResource("/rule.evaluate.target.js").getFile());
+		final DynamicRule rule = DynamicRule.build(file);
+
+		assertEquals(1, rule.evaluate().getValue());
 	}
 
 }

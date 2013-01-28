@@ -11,11 +11,10 @@ public class Target extends ScriptableObject {
 
 	private static final long serialVersionUID = 1L;
 
-	public List<Modifier> modifiers;
+	public List<Modifier> modifiers = new LinkedList<>();
 
 	@JSConstructor
 	public Target() {
-		modifiers = new LinkedList<>();
 	}
 
 	@JSFunction
